@@ -20,12 +20,12 @@
 					<h3 class="red">即将上映</h3>
 					<ul class="upcoming-list">
 						<li v-for="article in soon">
-							<router-link to="/detail">
+							<a @click="getDetail(article.id)" >
 								<p>{{ article.original_title }}</p>
 								<div class="imgBox">
 									<img v-bind:src="article.images.small" />
 								</div>
-							</router-link>
+							</a>
 						</li>
 					</ul>
 				</div>

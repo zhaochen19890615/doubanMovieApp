@@ -1,0 +1,132 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: serif;
+  background-color: #fff;
+  color: #000;
+  font-family: "微软雅黑";
+}
+
+/*common*/
+.l {
+  float: left;
+  display: inline;
+}
+.r {
+  float: right;
+  display: inline;
+}
+.of {
+  overflow: hidden;
+  *zoom: 1;
+}
+.block {
+  display: block;
+}
+.none {
+  display: none;
+}
+.clearfix {
+  clear: both;
+}
+
+.content{
+    width: 90%;
+    margin: 0 auto;
+
+}
+.df{
+    display: flex;
+}
+
+@myrem :28rem;
+
+a {
+  color: #000;
+}
+
+/*Home*/
+.content{}
+.main{
+    h1{
+        font-size: 36/@myrem;
+        padding: 20/@myrem 0;
+    }
+    h3{
+        font-size: 26/@myrem;
+        padding: 20/@myrem 0;
+    }
+    .HitBox{
+        padding-bottom: 20/@myrem;
+    }
+    .Hit-list{
+        li{
+            width:100/3%;
+            float: left;  
+            padding-bottom: 10/@myrem;
+            p{
+                font-size: 18/@myrem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding: 10/@myrem 0;
+            }
+        }
+    }
+    .upcomingBox{
+        padding-bottom: 20/@myrem;
+    }
+    .upcoming-list{
+        li{
+            width:100/3%;
+            float: left;  
+            padding-bottom: 10/@myrem;
+            p{
+                font-size: 18/@myrem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding: 10/@myrem 0;
+            }
+        }
+    }
+    .HitBox h3,.upcomingBox h3{
+        color: #2C3E50;
+    }
+}
+
+/*Detail*/
+.detailsBox{
+    .movieTitle{
+        margin: 20/@myrem 0;
+        font-size: 34/@myrem;
+    }
+    .movie-poster{
+        padding: 20/@myrem 0;
+    }
+    .movieText{
+        margin: 20/@myrem 0;
+        font-size: 24/@myrem;
+        line-height: 30@myrem;
+        text-align: left;
+        text-indent: 20px;
+    }
+    .casts{
+        .casts-name{
+            padding-right: 20/@myrem;
+            line-height: 30@myrem;
+            word-wrap: break-word;
+        }
+    }
+}
+
+

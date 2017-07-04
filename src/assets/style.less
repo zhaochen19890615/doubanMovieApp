@@ -40,8 +40,6 @@ body {
 }
 
 .content{
-    width: 90%;
-    margin: 0 auto;
 
 }
 .df{
@@ -55,8 +53,23 @@ a {
 }
 
 /*Home*/
-.content{}
+.content{
+    .titleBox{
+        h1{
+            width: 100%;
+            font-size: 36/@myrem;
+            padding: 20/@myrem 0;
+            background: #42B983;
+            position: fixed;
+        }
+    }
+    overflow:hidden;*zoom:1;
+    
+}
 .main{
+    width: 90%;
+    
+    margin: 100/@myrem auto 0;
     h1{
         font-size: 36/@myrem;
         padding: 20/@myrem 0;
@@ -72,13 +85,18 @@ a {
         li{
             width:100/3%;
             float: left;  
-            padding-bottom: 10/@myrem;
+            padding-bottom: 30/@myrem;
             p{
                 font-size: 18/@myrem;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 padding: 10/@myrem 0;
+            }
+            .imgBox{
+                img{
+                    box-shadow: 0px 0px 10px #ccc;
+                }
             }
         }
     }
@@ -89,7 +107,7 @@ a {
         li{
             width:100/3%;
             float: left;  
-            padding-bottom: 10/@myrem;
+            padding-bottom: 30/@myrem;
             p{
                 font-size: 18/@myrem;
                 overflow: hidden;
@@ -110,23 +128,60 @@ a {
         margin: 20/@myrem 0;
         font-size: 34/@myrem;
     }
+    .poster-box{
+        padding: 20/@myrem 0 40/@myrem;
+    }
     .movie-poster{
-        padding: 20/@myrem 0;
+//      padding: 20/@myrem 0;
+        box-shadow: 0px 0px 20px #ccc;
     }
     .movieText{
         margin: 20/@myrem 0;
         font-size: 24/@myrem;
-        line-height: 30@myrem;
+        line-height: 40/@myrem;
         text-align: left;
-        text-indent: 20px;
+        text-indent: 52/@myrem;
     }
     .casts{
+        line-height: 50/@myrem;
         .casts-name{
             padding-right: 20/@myrem;
-            line-height: 30@myrem;
+            line-height: 30/@myrem;
             word-wrap: break-word;
         }
     }
 }
 
-
+.actorsBox{
+    font-size: 24/@myrem;
+    text-align: left;
+    .actors-img{
+        float: right;
+    }
+    p{
+        line-height: 36/@myrem;
+    }
+    .actorWorks{
+        line-height: 42/@myrem;
+        .actor-item{
+            width: 100/@myrem;
+            text-align:justify;
+            text-align-last:justify;
+            display: inline-block;
+        }
+    }  
+}
+.back-btn{
+    height: 16/@myrem;
+    width: 16/@myrem;
+    border-top: 8/@myrem solid #2c3e50;
+    border-left: 8/@myrem solid #2c3e50;
+    background: transparent;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    margin-top: 20/@myrem;
+    position: absolute;
+    z-index: 1;
+    left: 30/@myrem;
+    top: 10/@myrem;
+}

@@ -1,7 +1,9 @@
 <template>
 	<div class="content">
-		<div class="main">
+		<div class="titleBox">
 			<h1>{{ msg }}</h1>
+		</div>
+		<div class="main">
 			<div class="blankBox">
 				<div class="HitBox clearfix">
 					<h3>正在热映</h3>

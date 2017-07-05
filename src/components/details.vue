@@ -12,10 +12,19 @@
 				</div>
 				<p class="casts">
 					<span>主演：</span>
-					<a @click="getActor(article.id)" class="casts-name" v-for="article in casts">
+					<a @click="getActor(article.id)" class="casts-name fc_green" v-for="article in casts">
 						{{ article.name }}
 					</a>
 				</p>
+				<p class="details-text">评分：<span class="fc_orange">{{ rating.average }}</span></p>
+				<p class="details-text">
+					<span class="">想看人数：<span class="fc_orange">{{ wish }}</span></span>
+				</p>
+				<p class="details-text">
+					<span class="">看过人数：<span class="fc_orange">{{ collect }}</span></span>
+				</p>
+				<p class="details-text">年代：<span class="fc_orange">{{ year }}</span></p>
+				<a v-bind:href="mobile_url" class="movie-href fc_green">电影详情</a>
 				<p class="movieText">{{ summary }}</p>
 			</div>
 		</div>
@@ -31,7 +40,12 @@
 				mytitle: '',
 				myposter: '',
 				casts: [],
-				summary: ''
+				rating:'',
+				summary: '',
+				wish:'',
+				collect:'',
+				year:'',
+				mobile_url:''
 			}
 		},
 		created:function(){
@@ -52,6 +66,11 @@
 				        self.myposter=response.images.large;
 						self.summary=response.summary;
 						self.casts=response.casts;
+						self.rating=response.rating;
+						self.wish=response.wish_count;
+				        self.collect=response.collect_count;
+				        self.year=response.year;
+				        self.mobile_url=response.mobile_url;
 				    },  
 			        error:function(response){
 				        console.log(response);

@@ -10,6 +10,7 @@
 				<div class="poster-box">
 					<img class="movie-poster" v-bind:src="myposter"/>
 				</div>
+				<p>导演：<a v-bind:href="directors.alt" class="fc_green">{{ directors.name }}</a></p>
 				<p class="casts">
 					<span>主演：</span>
 					<a @click="getActor(article.id)" class="casts-name fc_green" v-for="article in casts">
@@ -40,6 +41,7 @@
 				mytitle: '',
 				myposter: '',
 				casts: [],
+				directors:'',
 				rating:'',
 				summary: '',
 				wish:'',
@@ -66,6 +68,7 @@
 				        self.myposter=response.images.large;
 						self.summary=response.summary;
 						self.casts=response.casts;
+						self.directors=response.directors[0];
 						self.rating=response.rating;
 						self.wish=response.wish_count;
 				        self.collect=response.collect_count;
